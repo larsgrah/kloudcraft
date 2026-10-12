@@ -1,0 +1,53 @@
+name: update
+
+on:
+  schedule:
+    - cron: "17 * * * *"
+  push:
+    branches: [main]
+    paths: [mods.txt]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency: update
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: stable
+      - run: go install github.com/packwiz/packwiz@latest
+
+      # the hourly run only follows the server and retries missing mods,
+      # a mods.txt change or a manual run re-adds everything at its latest build
+      - name: Update pack
+        shell: bash
+        run: ./update.py ${{ github.event_name != 'schedule' && '--rebuild' || '' }} | tee "$RUNNER_TEMP/out.txt"
+
+      - name: Commit
+        id: commit
+        run: |
+          git add -A
+          if git diff --cached --quiet; then exit 0; fi
+          summary=$(tail -n 1 "$RUNNER_TEMP/out.txt")
+          git -c user.name="kloudcraft updater" -c user.email="actions@users.noreply.github.com" commit -m "$summary"
+          git push
+          echo "summary=$summary" >> "$GITHUB_OUTPUT"
+
+      - name: Notify
+        if: steps.commit.outputs.summary != '' && env.NTFY_URL != ''
+        env:
+          NTFY_URL: ${{ secrets.NTFY_URL }}
+          NTFY_TOKEN: ${{ secrets.NTFY_TOKEN }}
+          SUMMARY: ${{ steps.commit.outputs.summary }}
+        run: |
+          curl -sf -o /dev/null "$NTFY_URL" \
+            -H "Authorization: Bearer $NTFY_TOKEN" \
+            -H "Title: kloudcraft pack updated" \
+            -H "Tags: video_game" \
+            -d "$SUMMARY"

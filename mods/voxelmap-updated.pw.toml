@@ -1,0 +1,13 @@
+name = "VoxelMap-Updated"
+filename = "voxelmap-fabric-26.2-1.16.10.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/wkzK5379/versions/BjsGekii/voxelmap-fabric-26.2-1.16.10.jar"
+hash-format = "sha512"
+hash = "051754b2d3d089a15f29b4594bed7a2b26607c5076f369525ccb1ab0a125e2fd37507d56a5260eb8e190e1843209f104f19b1b24dac473eff8e85a693d36336d"
+
+[update]
+[update.modrinth]
+mod-id = "wkzK5379"
+version = "BjsGekii"

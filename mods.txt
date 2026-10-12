@@ -1,0 +1,35 @@
+# Modrinth slugs, one per line. Edit this to add or remove a mod.
+# Mods without a build for the current Minecraft version are skipped
+# and come back on their own, see missing.txt.
+
+# libraries
+fabric-api
+fabric-language-kotlin
+cloth-config
+malilib
+
+# performance
+sodium
+lithium
+ferrite-core
+immediatelyfast
+entityculling
+dynamic-fps
+distanthorizons
+
+# visuals
+iris
+lambdynamiclights
+sodium-extra
+reeses-sodium-options
+capes
+
+# utility
+litematica
+voxelmap-updated
+freecam
+replaymod
+logical-zoom
+appleskin
+fastchest-revived
+modmenu
