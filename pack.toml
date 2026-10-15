@@ -1,13 +1,13 @@
 name = "kloudcraft"
 author = "kloud"
-version = "26.2"
+version = "26.3"
 pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "e36cc196089e6a58574cf551500072b42f0aa53ff900a4a61e0b6c375f7a8b08"
+hash = "e775ad16eac472e5ec00bfd9d82b6d00b6f9bdda6b775b546c8ed111c4fcf490"
 
 [versions]
-fabric = "0.19.5"
-minecraft = "26.2"
+fabric = "0.20.0"
+minecraft = "26.3"
