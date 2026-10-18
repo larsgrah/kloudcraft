@@ -101,6 +101,11 @@ hash = "7ddded1570a6ed9ec5b9f0fa1dbce5e29896c4f00f9fa56efe09b7716bb6bf3d"
 metafile = true
 
 [[files]]
+file = "mods/replaymod.pw.toml"
+hash = "f1a9964d28bed6378fa94af7af9d5de31deec4d9e7e7d90b7c1ef3e7e14140d8"
+metafile = true
+
+[[files]]
 file = "mods/sodium-extra.pw.toml"
 hash = "69d683554d0db2dc59ce9ed08b28743ddb56d9ea12b80e52e43051d082987bd2"
 metafile = true
