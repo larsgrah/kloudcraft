@@ -41,6 +41,11 @@ hash = "1811d49906aa7a1e7f1230535c6fec91be45129d028f7900cf35571a497e42b3"
 metafile = true
 
 [[files]]
+file = "mods/fastchest-revived.pw.toml"
+hash = "d23235e7c2c684d370dce652c09b679e1bac6a1ddddac93ac904d489c6190ac9"
+metafile = true
+
+[[files]]
 file = "mods/ferrite-core.pw.toml"
 hash = "069d81cab53c0141459ad4d70bcf3e10f17652f24cc62d3b4a0fc2cd2b700871"
 metafile = true

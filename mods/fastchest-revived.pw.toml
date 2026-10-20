@@ -1,0 +1,13 @@
+name = "FastChest Revived"
+filename = "fastchestrevived-fabric-2.0.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/DcSJwUyy/versions/OG21BqsD/fastchestrevived-fabric-2.0.jar"
+hash-format = "sha512"
+hash = "239658c8372b5f454948dff64af2c6120d19d6ea454ce28c07d10285b592019f99f4ba2640bb21c7e7b8f338116194424b34e8c9dd88e21600fa667c0cf1a771"
+
+[update]
+[update.modrinth]
+mod-id = "DcSJwUyy"
+version = "OG21BqsD"
