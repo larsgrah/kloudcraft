@@ -15,7 +15,8 @@ ferrite-core
 immediatelyfast
 entityculling
 dynamic-fps
-distanthorizons
+voxy
+voxy-server-side
 
 # visuals
 iris
