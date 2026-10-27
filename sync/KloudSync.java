@@ -33,13 +33,13 @@ public class KloudSync {
 
         String minecraft = version(pack, "minecraft");
         String fabric = version(pack, "fabric");
-        String wanted = minecraft + " " + fabric;
-        Path marker = inst.resolve(".packversion");
-        String have = Files.exists(marker) ? Files.readString(marker).trim() : "";
-
-        if (!wanted.equals(have)) {
-            // Prism reads the components before this runs, so the change only counts on the next launch
-            Files.writeString(inst.resolve("mmc-pack.json"), """
+        // Prism keeps the components in memory and saves them over mmc-pack.json on every
+        // launch, right before this runs. So the file is what this launch will really use,
+        // and a fix written here only counts once Prism has read it again on a restart.
+        Path components = inst.resolve("mmc-pack.json");
+        String current = Files.exists(components) ? Files.readString(components) : "";
+        if (!minecraft.equals(component(current, "net.minecraft")) || !fabric.equals(component(current, "net.fabricmc.fabric-loader"))) {
+            Files.writeString(components, """
                     {
                         "components": [
                             {"uid": "net.minecraft", "version": "%s", "important": true},
@@ -48,8 +48,8 @@ public class KloudSync {
                         "formatVersion": 1
                     }
                     """.formatted(minecraft, fabric));
-            Files.writeString(marker, wanted + "\n");
-            String msg = "kloudcraft was updated to Minecraft " + minecraft + ".\nPress Launch again to start it.";
+            String msg = "kloudcraft was updated to Minecraft " + minecraft + " with Fabric " + fabric + ".\n"
+                    + "Close Prism Launcher completely, open it again and press Launch.";
             System.out.println(msg);
             if (!GraphicsEnvironment.isHeadless()) {
                 JOptionPane.showMessageDialog(null, msg, "kloudcraft", JOptionPane.INFORMATION_MESSAGE);
@@ -63,6 +63,12 @@ public class KloudSync {
                 .inheritIO()
                 .start();
         System.exit(p.waitFor());
+    }
+
+    // version of a component in mmc-pack.json, Prism writes uid and version next to each other
+    static String component(String json, String uid) {
+        Matcher m = Pattern.compile("\"uid\"\\s*:\\s*\"" + Pattern.quote(uid) + "\"\\s*,\\s*\"version\"\\s*:\\s*\"([^\"]+)\"").matcher(json);
+        return m.find() ? m.group(1) : null;
     }
 
     static String version(String pack, String key) {

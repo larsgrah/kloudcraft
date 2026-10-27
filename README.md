@@ -14,7 +14,9 @@ You need [Prism Launcher](https://prismlauncher.org) with your Minecraft account
 That is it. Mods are downloaded and updated each time you press Launch.
 
 When the server moved to a new Minecraft version you get a small
-"kloudcraft was updated" message once. Press Launch again and you are on the new version.
+"kloudcraft was updated" message. Close Prism completely, open it again and press Launch.
+Prism only picks up a new Minecraft or Fabric version after a restart, so until then the message comes back
+instead of a broken start.
 
 Coming from an older kloudcraft instance? Import this one as a new instance and copy over
 what you want to keep from the old instance folder: `options.txt`, `servers.dat`, `config`,

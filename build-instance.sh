@@ -16,7 +16,6 @@ curl -sfL -o dist/kloudcraft/minecraft/packwiz-installer-bootstrap.jar \
   https://github.com/packwiz/packwiz-installer-bootstrap/releases/download/v0.0.3/packwiz-installer-bootstrap.jar
 
 cp instance/instance.cfg dist/kloudcraft/
-echo "$mc $fabric" > dist/kloudcraft/.packversion
 cat > dist/kloudcraft/mmc-pack.json <<JSON
 {
     "components": [
