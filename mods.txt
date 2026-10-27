@@ -32,5 +32,6 @@ freecam
 replaymod
 logical-zoom
 appleskin
+simple-voice-chat
 fastchest-revived
 modmenu
