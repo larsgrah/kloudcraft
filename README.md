@@ -34,3 +34,6 @@ Your own extra mods in the `mods` folder are left alone.
 - Run the workflow by hand to pull the latest build of every mod without a Minecraft change.
 - `./build-instance.sh` builds the instance zip for the release. It only needs a rebuild
   when `sync/` or `instance/` change.
+- `sync/KloudSync.java` is the launch check every instance runs. Instances get a new version through the
+  `kloudcraft-updater` mod, which puts its bundled copy in place when the game starts. After changing `sync/`
+  or `updater/`, run `./build-updater.sh` (needs a JDK and packwiz) and push the rebuilt jar.
