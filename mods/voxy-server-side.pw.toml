@@ -1,0 +1,13 @@
+name = "Voxy Server Side"
+filename = "voxy-server-side-fabric.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/84zcagOb/versions/pelnHKPK/voxy-server-side-fabric.jar"
+hash-format = "sha512"
+hash = "4ef6ff1488e27657b1020e24a2380b7054f3a5e02a27e2ac18a5a16803b1713a8bca81a279420446b0638c3fae02d32ddf39581060b6ab0891b22b1958c7825d"
+
+[update]
+[update.modrinth]
+mod-id = "84zcagOb"
+version = "pelnHKPK"

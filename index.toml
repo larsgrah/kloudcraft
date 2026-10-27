@@ -16,11 +16,6 @@ hash = "2b9727522c90a979eb9671ad7c5421443d91391b0697d1772146e6bfa19cb3c1"
 metafile = true
 
 [[files]]
-file = "mods/distanthorizons.pw.toml"
-hash = "8cfd619edd7190fdd7f048bc7815193699d0583857f988e421b8e7816167ad25"
-metafile = true
-
-[[files]]
 file = "mods/dynamic-fps.pw.toml"
 hash = "84d6a2b87db74408c8fd2fd15792bad981ffbab43e1ee96b79aabded2604141c"
 metafile = true
@@ -32,7 +27,7 @@ metafile = true
 
 [[files]]
 file = "mods/fabric-api.pw.toml"
-hash = "249b9a3bfcb8a23719e656abb121094e63c6d88eeab08f2fbd8ae569948d5303"
+hash = "a4c31d16582621909eba9f06a34f03114d212c7e684c8dbc9991fb12a42e043b"
 metafile = true
 
 [[files]]
@@ -52,7 +47,7 @@ metafile = true
 
 [[files]]
 file = "mods/freecam.pw.toml"
-hash = "c22fcc6aa11d759af4546582764d5da52c50bf2cef4a98bacd0175b0b728cfff"
+hash = "956925160888e1f05887dc1a5a97ba91ce0288b967d4d1dc826af52c737b1a29"
 metafile = true
 
 [[files]]
@@ -102,7 +97,7 @@ metafile = true
 
 [[files]]
 file = "mods/reeses-sodium-options.pw.toml"
-hash = "7ddded1570a6ed9ec5b9f0fa1dbce5e29896c4f00f9fa56efe09b7716bb6bf3d"
+hash = "dbff49110dc8d3d2071b1d1a93a694601b595af2aa9ee48f3f08fbe90c734b69"
 metafile = true
 
 [[files]]
@@ -112,15 +107,25 @@ metafile = true
 
 [[files]]
 file = "mods/sodium-extra.pw.toml"
-hash = "69d683554d0db2dc59ce9ed08b28743ddb56d9ea12b80e52e43051d082987bd2"
+hash = "56bb32f1d8f7148d559b15806185b69023a7b04d228ed6143a54601ee5e57279"
 metafile = true
 
 [[files]]
 file = "mods/sodium.pw.toml"
-hash = "54d699d9ba85bb08b9fd3696a11c7449ea1175a118805855143e1c88fa54aa6b"
+hash = "0bf314c578473659bd89915114cac8e60994988f405218726a48d35b06e9316c"
 metafile = true
 
 [[files]]
 file = "mods/voxelmap-updated.pw.toml"
 hash = "c610a042b9769551d1dfc175719797ecc8d93c55a4921ae1d4cbf7414b16f2b5"
+metafile = true
+
+[[files]]
+file = "mods/voxy-server-side.pw.toml"
+hash = "ec5c200d8d5131e8c4151bb52f9ff374c8fd0ba1b65b5cd299962c038061178c"
+metafile = true
+
+[[files]]
+file = "mods/voxy.pw.toml"
+hash = "19ae82550e2d7e5a444bb3c5c49777ecf6dfd6334e286ad499ca17235587d2ed"
 metafile = true
