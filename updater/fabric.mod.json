@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "id": "kloudcraft-updater",
+  "version": "1",
+  "name": "kloudcraft updater",
+  "description": "Keeps the kloudcraft launcher sync up to date.",
+  "environment": "client",
+  "entrypoints": {
+    "preLaunch": ["kloudcraft.KloudUpdater"]
+  },
+  "depends": {
+    "fabricloader": ">=0.15.0"
+  }
+}

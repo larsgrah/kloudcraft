@@ -61,6 +61,10 @@ hash = "3af2426b8d83a5fcda1ff6de2035d53bcff532653c196f2ea6d7647995e45131"
 metafile = true
 
 [[files]]
+file = "mods/kloudcraft-updater.jar"
+hash = "b157b71cd23be372d5e7646a4f397c957589ac7eec763eb8bedbbf01acad522c"
+
+[[files]]
 file = "mods/lambdynamiclights.pw.toml"
 hash = "1bcd8fa2d0c2c3390361736420236c2a5331002ae36bb5cba5a062b8708b5ee9"
 metafile = true

@@ -8,3 +8,5 @@
 /update.py
 /build-instance.sh
 /.gitignore
+/updater/
+/build-updater.sh

@@ -8,7 +8,6 @@ Otherwise only the mods listed in missing.txt are retried.
 """
 import json
 import re
-import shutil
 import socket
 import struct
 import subprocess
@@ -86,7 +85,9 @@ def main():
 
     if target != current or rebuild:
         print(f"minecraft {current} -> {target}")
-        shutil.rmtree(MODS, ignore_errors=True)
+        # only the packwiz metadata, the jars committed here (kloudcraft-updater) stay
+        for meta in MODS.glob("*.pw.toml"):
+            meta.unlink()
         r = packwiz("init", "-r", "--name", "kloudcraft", "--author", "kloud", "--version", target,
                     "--mc-version", target, "--modloader", "fabric", "--fabric-latest")
         if r.returncode != 0:
