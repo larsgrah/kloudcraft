@@ -26,7 +26,6 @@ reeses-sodium-options
 capes
 
 # utility
-litematica
 voxelmap-updated
 freecam
 replaymod
