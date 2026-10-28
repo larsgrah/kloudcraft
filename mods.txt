@@ -20,6 +20,8 @@ voxy-server-side
 # visuals
 iris
 lambdynamiclights
+chat-heads
+status-effect-bars
 sodium-extra
 reeses-sodium-options
 capes
@@ -30,6 +32,10 @@ freecam
 replaymod
 logical-zoom
 appleskin
+gamma-utils
+mouse-tweaks
+jade
+shulkerboxtooltip
 simple-voice-chat
 fastchest-revived
 modmenu
