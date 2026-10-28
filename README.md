@@ -27,6 +27,9 @@ Your own extra mods in the `mods` folder are left alone.
 ## Maintaining
 
 - `mods.txt` is the mod list, one Modrinth slug per line. Push a change and the pack is rebuilt.
+- `slug@<version id>` in `mods.txt` pins a mod, `fabric@<version>` the loader. The rebuild keeps
+  them, a hand edit of a `.pw.toml` or `pack.toml` is gone at the next one. A pin for another
+  Minecraft version is skipped and the run says so.
 - The `update` workflow runs hourly. It asks the server which Minecraft version it runs and
   moves the pack there, with the latest build of every mod.
 - Mods without a build for that version are left out and listed in `missing.txt`.

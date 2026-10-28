@@ -5,6 +5,9 @@ Usage: update.py [--rebuild] [minecraft-version]
 Without a version it comes from a status ping of SERVER.
 A version change or --rebuild re-adds every mod from mods.txt at its latest build.
 Otherwise only the mods listed in missing.txt are retried.
+
+A line slug@<modrinth version id> in mods.txt pins that mod, fabric@<version> pins the loader.
+A pin for another Minecraft version is ignored, the mod gets its latest build then.
 """
 import json
 import re
@@ -12,6 +15,7 @@ import socket
 import struct
 import subprocess
 import sys
+import urllib.request
 from pathlib import Path
 
 SERVER = ("mc.kloud.software", 25565)
@@ -62,6 +66,11 @@ def pack_version():
     return m.group(1) if m else None
 
 
+def pin_fits(version_id, mc):
+    with urllib.request.urlopen(f"https://api.modrinth.com/v2/version/{version_id}", timeout=30) as r:
+        return mc in json.load(r)["game_versions"]
+
+
 def packwiz(*args):
     return subprocess.run(["packwiz", *args], cwd=ROOT, capture_output=True, text=True)
 
@@ -83,25 +92,35 @@ def main():
     if not target or not re.fullmatch(r"\d+(\.\d+)+", target):
         sys.exit(f"no usable minecraft version: {target!r}")
 
+    lines = [l.split("#")[0].strip() for l in (ROOT / "mods.txt").read_text().splitlines()]
+    entries = [l.partition("@")[::2] for l in lines if l]
+    fabric = next((v for s, v in entries if s == "fabric" and v), None)
+    mods = [(s, v) for s, v in entries if s != "fabric"]
+    # pinned first, or another mod pulls them in as a dependency at their latest build
+    mods.sort(key=lambda e: not e[1])
+
     if target != current or rebuild:
         print(f"minecraft {current} -> {target}")
         # only the packwiz metadata, the jars committed here (kloudcraft-updater) stay
         for meta in MODS.glob("*.pw.toml"):
             meta.unlink()
         r = packwiz("init", "-r", "--name", "kloudcraft", "--author", "kloud", "--version", target,
-                    "--mc-version", target, "--modloader", "fabric", "--fabric-latest")
+                    "--mc-version", target, "--modloader", "fabric",
+                    *(["--fabric-version", fabric] if fabric else ["--fabric-latest"]))
         if r.returncode != 0:
             sys.exit(r.stdout + r.stderr)
 
-    slugs = [l.strip() for l in (ROOT / "mods.txt").read_text().splitlines()]
-    slugs = [s for s in slugs if s and not s.startswith("#")]
+    slugs = [s for s, _ in mods]
     missing = []
-    for slug in slugs:
+    for slug, pin in mods:
         meta = MODS / f"{slug}.pw.toml"
         if not meta.exists():
-            packwiz("modrinth", "add", "-y", slug)
+            if pin and not pin_fits(pin, target):
+                print(f"  stale pin {slug}@{pin}, not built for {target}, using the latest build")
+                pin = ""
+            packwiz("modrinth", "add", "-y", f"https://modrinth.com/mod/{slug}/version/{pin}" if pin else slug)
         if meta.exists():
-            print(f"  ok       {slug}")
+            print(f"  ok       {slug}{'@' + pin if pin else ''}")
         else:
             print(f"  missing  {slug}")
             missing.append(slug)

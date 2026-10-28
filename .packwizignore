@@ -10,3 +10,4 @@
 /.gitignore
 /updater/
 /build-updater.sh
+__pycache__/

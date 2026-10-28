@@ -1,6 +1,10 @@
 # Modrinth slugs, one per line. Edit this to add or remove a mod.
 # Mods without a build for the current Minecraft version are skipped
 # and come back on their own, see missing.txt.
+# slug@<modrinth version id> pins a mod, a pin for another Minecraft version is ignored.
+
+# loader, instances on the old sync are stuck on 0.20.0
+fabric@0.20.0
 
 # libraries
 fabric-api
@@ -22,7 +26,7 @@ iris
 lambdynamiclights
 chat-heads
 status-effect-bars
-sodium-extra
+sodium-extra@te2y9qZn  # 0.9.4, 0.9.6 needs fabric 0.20.1
 reeses-sodium-options
 capes
 
