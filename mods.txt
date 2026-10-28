@@ -6,7 +6,6 @@
 fabric-api
 fabric-language-kotlin
 cloth-config
-malilib
 
 # performance
 sodium
