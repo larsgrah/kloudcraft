@@ -6,6 +6,11 @@ hash = "ff675667f4c6924a9eaebc42dc2df5306dc5e8b005e931d9d8b73cebad67d5eb"
 metafile = true
 
 [[files]]
+file = "mods/better-mount-hud.pw.toml"
+hash = "6e9bddf1d0b01deb875b99fda9395b7bf927ce1a795a70b5a1bd56500e43df03"
+metafile = true
+
+[[files]]
 file = "mods/capes.pw.toml"
 hash = "8462f48f7578d8c8828d56cb92149051757aab03fd7621e6590bf6877bc53024"
 metafile = true
@@ -21,8 +26,18 @@ hash = "2b9727522c90a979eb9671ad7c5421443d91391b0697d1772146e6bfa19cb3c1"
 metafile = true
 
 [[files]]
+file = "mods/controlling.pw.toml"
+hash = "2fa46b8df6c6de59e8d793d1f3fe6de20f590ad8711b826a2a981680bc9aceb3"
+metafile = true
+
+[[files]]
 file = "mods/dynamic-fps.pw.toml"
 hash = "84d6a2b87db74408c8fd2fd15792bad981ffbab43e1ee96b79aabded2604141c"
+metafile = true
+
+[[files]]
+file = "mods/enchantment-descriptions.pw.toml"
+hash = "892e6262419b53f51c1baf7b2c4b83840df8559c92ddddc8c6fa78859af898df"
 metafile = true
 
 [[files]]
@@ -61,6 +76,11 @@ hash = "e598aebd1433a4c01be105a9e07b642aedc3e62d55cfae63a75612b96dee4319"
 metafile = true
 
 [[files]]
+file = "mods/held-item-info.pw.toml"
+hash = "aede27adfccb0044348fd31c31aaf33a7f7ef98cf430bbaed2077d310cbb33ff"
+metafile = true
+
+[[files]]
 file = "mods/immediatelyfast.pw.toml"
 hash = "a7f6a1543f41198911a8b1e5e059fa0c8003365ebd6c2314e2dfa0806aff300a"
 metafile = true
@@ -68,6 +88,11 @@ metafile = true
 [[files]]
 file = "mods/iris.pw.toml"
 hash = "3af2426b8d83a5fcda1ff6de2035d53bcff532653c196f2ea6d7647995e45131"
+metafile = true
+
+[[files]]
+file = "mods/itemswapper.pw.toml"
+hash = "cd91c7298cfdb76d520f7b612cb426df3d9e10a84431a0153bf0f61fa3479885"
 metafile = true
 
 [[files]]
@@ -110,6 +135,11 @@ hash = "4d3d2ad41a037af6f78e2a6c2908c4098bb0b5c03ad0d2711a0c0c6df5e7a172"
 metafile = true
 
 [[files]]
+file = "mods/prickle.pw.toml"
+hash = "cd8652d9a631bebcc542e8b41bfcfeeffd7c86a4a9344e6feac1b00b87878c8b"
+metafile = true
+
+[[files]]
 file = "mods/reeses-sodium-options.pw.toml"
 hash = "dbff49110dc8d3d2071b1d1a93a694601b595af2aa9ee48f3f08fbe90c734b69"
 metafile = true
@@ -117,6 +147,11 @@ metafile = true
 [[files]]
 file = "mods/replaymod.pw.toml"
 hash = "f1a9964d28bed6378fa94af7af9d5de31deec4d9e7e7d90b7c1ef3e7e14140d8"
+metafile = true
+
+[[files]]
+file = "mods/searchables.pw.toml"
+hash = "91f6defb56c64900bd1ad69147acf1c151b5b372b3ec405933d92ef9308617ae"
 metafile = true
 
 [[files]]

@@ -1,0 +1,13 @@
+name = "Held Item Info"
+filename = "held-item-info-1.9.3.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/tEcWzCZz/versions/4rTrB3O6/held-item-info-1.9.3.jar"
+hash-format = "sha512"
+hash = "25c929a0be5f6af5c0b6549c150083d14c9ed39be24a46b2aafda62e82f0e992d19d426ccbc0990a99364bc675b74289b3cbff87b7ebdfd6033a36248057aaa5"
+
+[update]
+[update.modrinth]
+mod-id = "tEcWzCZz"
+version = "4rTrB3O6"
