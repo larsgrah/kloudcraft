@@ -36,6 +36,11 @@ gamma-utils
 mouse-tweaks
 jade
 shulkerboxtooltip
+controlling
+held-item-info
+better-mount-hud
+enchantment-descriptions
+itemswapper
 simple-voice-chat
 fastchest-revived
 modmenu
