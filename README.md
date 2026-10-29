@@ -30,6 +30,9 @@ Your own extra mods in the `mods` folder are left alone.
 - `slug@<version id>` in `mods.txt` pins a mod, `fabric@<version>` the loader. The rebuild keeps
   them, a hand edit of a `.pw.toml` or `pack.toml` is gone at the next one. A pin for another
   Minecraft version is skipped and the run says so.
+- `./check.sh` (needs a JDK) checks every mod's `depends` and `breaks` against the rest of the
+  pack, with Fabric Loader's own version matching. The workflow runs it before it commits, so a
+  pack that would not load stays off `main` and the run fails with what is wrong.
 - The `update` workflow runs hourly. It asks the server which Minecraft version it runs and
   moves the pack there, with the latest build of every mod.
 - Mods without a build for that version are left out and listed in `missing.txt`.

@@ -11,3 +11,5 @@
 /updater/
 /build-updater.sh
 __pycache__/
+/check/
+/check.sh

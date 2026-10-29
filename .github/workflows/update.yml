@@ -22,6 +22,10 @@ jobs:
         with:
           go-version: stable
       - run: go install github.com/packwiz/packwiz@latest
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 25
 
       # the hourly run only follows the server and retries missing mods,
       # a mods.txt change or a manual run re-adds everything at its latest build
@@ -34,6 +38,8 @@ jobs:
         run: |
           git add -A
           if git diff --cached --quiet; then exit 0; fi
+          # a pack that would not load never reaches main, players keep the last good one
+          ./check.sh
           summary=$(tail -n 1 "$RUNNER_TEMP/out.txt")
           git -c user.name="kloudcraft updater" -c user.email="actions@users.noreply.github.com" commit -m "$summary"
           git push
@@ -51,3 +57,17 @@ jobs:
             -H "Title: kloudcraft pack updated" \
             -H "Tags: video_game" \
             -d "$SUMMARY"
+
+      - name: Notify failure
+        if: failure() && env.NTFY_URL != ''
+        env:
+          NTFY_URL: ${{ secrets.NTFY_URL }}
+          NTFY_TOKEN: ${{ secrets.NTFY_TOKEN }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          curl -sf -o /dev/null "$NTFY_URL" \
+            -H "Authorization: Bearer $NTFY_TOKEN" \
+            -H "Title: kloudcraft pack update failed" \
+            -H "Tags: warning" \
+            -H "Click: $RUN_URL" \
+            -d "nothing was pushed, players stay on the last good pack"
