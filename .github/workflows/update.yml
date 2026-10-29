@@ -16,6 +16,9 @@ concurrency: update
 jobs:
   update:
     runs-on: ubuntu-latest
+    # job level, a step's own env is not visible to its if
+    env:
+      NTFY_URL: ${{ secrets.NTFY_URL }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-go@v5
@@ -48,7 +51,6 @@ jobs:
       - name: Notify
         if: steps.commit.outputs.summary != '' && env.NTFY_URL != ''
         env:
-          NTFY_URL: ${{ secrets.NTFY_URL }}
           NTFY_TOKEN: ${{ secrets.NTFY_TOKEN }}
           SUMMARY: ${{ steps.commit.outputs.summary }}
         run: |
@@ -61,7 +63,6 @@ jobs:
       - name: Notify failure
         if: failure() && env.NTFY_URL != ''
         env:
-          NTFY_URL: ${{ secrets.NTFY_URL }}
           NTFY_TOKEN: ${{ secrets.NTFY_TOKEN }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |
