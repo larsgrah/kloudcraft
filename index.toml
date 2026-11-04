@@ -1,6 +1,11 @@
 hash-format = "sha256"
 
 [[files]]
+file = "mods/3dskinlayers.pw.toml"
+hash = "bb194ec7f1affde2fb2d6d052683e96babe72b693e4c3263dfd8245d3941b701"
+metafile = true
+
+[[files]]
 file = "mods/appleskin.pw.toml"
 hash = "ff675667f4c6924a9eaebc42dc2df5306dc5e8b005e931d9d8b73cebad67d5eb"
 metafile = true
@@ -31,6 +36,11 @@ hash = "2b9727522c90a979eb9671ad7c5421443d91391b0697d1772146e6bfa19cb3c1"
 metafile = true
 
 [[files]]
+file = "mods/continuity.pw.toml"
+hash = "aad07f6496bbf478116eaa0e82fa7fbdd022ca755b392029193e1090d76716b3"
+metafile = true
+
+[[files]]
 file = "mods/controlling.pw.toml"
 hash = "2fa46b8df6c6de59e8d793d1f3fe6de20f590ad8711b826a2a981680bc9aceb3"
 metafile = true
@@ -46,8 +56,18 @@ hash = "892e6262419b53f51c1baf7b2c4b83840df8559c92ddddc8c6fa78859af898df"
 metafile = true
 
 [[files]]
+file = "mods/entity-model-features.pw.toml"
+hash = "d00381d69d0dba1911229acbc2f89887026d72cc0270a27c94c1e7d06a61fd19"
+metafile = true
+
+[[files]]
 file = "mods/entityculling.pw.toml"
 hash = "29f920b8bdac98a1a1d9e6454d0c3b4d0eb1f3779f2fea7b7df177b2163e5d61"
+metafile = true
+
+[[files]]
+file = "mods/entitytexturefeatures.pw.toml"
+hash = "c029d9c7873a6f072332e97d54422efa438bc8ae81d53bd1c078a6dd1644f0ce"
 metafile = true
 
 [[files]]
@@ -91,6 +111,11 @@ hash = "a7f6a1543f41198911a8b1e5e059fa0c8003365ebd6c2314e2dfa0806aff300a"
 metafile = true
 
 [[files]]
+file = "mods/inventory-profiles-next.pw.toml"
+hash = "6afdd9a4f55afb1f553f2cef664d05c70680263cfb327f951755452f2c34670d"
+metafile = true
+
+[[files]]
 file = "mods/iris.pw.toml"
 hash = "3af2426b8d83a5fcda1ff6de2035d53bcff532653c196f2ea6d7647995e45131"
 metafile = true
@@ -115,6 +140,11 @@ hash = "1bcd8fa2d0c2c3390361736420236c2a5331002ae36bb5cba5a062b8708b5ee9"
 metafile = true
 
 [[files]]
+file = "mods/libipn.pw.toml"
+hash = "d1835fa094e5e072919e78f8849a1342a022b1076b94db3effd30871d92e71cc"
+metafile = true
+
+[[files]]
 file = "mods/lithium.pw.toml"
 hash = "b44f3ab71e52f1aaae97cf8644f2316042de8b7777d6b6794567c8c7d220bd2b"
 metafile = true
@@ -132,6 +162,11 @@ metafile = true
 [[files]]
 file = "mods/mouse-tweaks.pw.toml"
 hash = "d9f809b321cdd117600e45f92215c8e750ed0b65641c18d394bb4c111019581d"
+metafile = true
+
+[[files]]
+file = "mods/not-enough-animations.pw.toml"
+hash = "353e7e6605f04764a8fc7f18d7e1833ffd23301f23509a85482654f467fb696f"
 metafile = true
 
 [[files]]
@@ -180,6 +215,11 @@ hash = "0bf314c578473659bd89915114cac8e60994988f405218726a48d35b06e9316c"
 metafile = true
 
 [[files]]
+file = "mods/sound-physics-remastered.pw.toml"
+hash = "9bab2f7038705a3a14c522ef378743465a596f2d1e28305c2c9a291cbb7d6289"
+metafile = true
+
+[[files]]
 file = "mods/status-effect-bars.pw.toml"
 hash = "a175ca70f988a515935804287a4fa3534ce213365587ddb4bc54c9d127e6eda5"
 metafile = true
@@ -197,4 +237,9 @@ metafile = true
 [[files]]
 file = "mods/voxy.pw.toml"
 hash = "19ae82550e2d7e5a444bb3c5c49777ecf6dfd6334e286ad499ca17235587d2ed"
+metafile = true
+
+[[files]]
+file = "mods/wakes.pw.toml"
+hash = "03ae9ef3b69a07ce1f40cb2cfcba63108005a2d0905883682e70bd18696dfffc"
 metafile = true
