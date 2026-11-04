@@ -1,0 +1,13 @@
+name = "Armor Durability HUD"
+filename = "mc-armor-hud-8.1.1.6-26.3-fabric.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/hAG5PWoN/versions/X2FCAeKM/mc-armor-hud-8.1.1.6-26.3-fabric.jar"
+hash-format = "sha512"
+hash = "71b78e432c77f30ddfe2a579110953342ab1cb1676822fb06ccfb2bd988c615e61a4eaac1d844bc898eb868be3864bc812cc1261124570862e590d17c77d8c38"
+
+[update]
+[update.modrinth]
+mod-id = "hAG5PWoN"
+version = "X2FCAeKM"
