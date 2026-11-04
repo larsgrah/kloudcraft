@@ -30,6 +30,12 @@ sodium-extra@te2y9qZn  # 0.9.4, 0.9.6 needs fabric 0.20.1
 reeses-sodium-options
 capes
 armor-durability-hud
+continuity
+entitytexturefeatures
+entity-model-features
+3dskinlayers
+not-enough-animations
+wakes
 
 # utility
 voxelmap-updated
@@ -47,5 +53,7 @@ better-mount-hud
 enchantment-descriptions
 itemswapper
 simple-voice-chat
+sound-physics-remastered
+inventory-profiles-next
 fastchest-revived
 modmenu
