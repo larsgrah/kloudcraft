@@ -29,6 +29,7 @@ status-effect-bars
 sodium-extra@te2y9qZn  # 0.9.4, 0.9.6 needs fabric 0.20.1
 reeses-sodium-options
 capes
+armor-durability-hud
 
 # utility
 voxelmap-updated
