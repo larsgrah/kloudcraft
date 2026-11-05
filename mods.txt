@@ -54,6 +54,6 @@ enchantment-descriptions
 itemswapper
 simple-voice-chat
 sound-physics-remastered
-inventory-profiles-next
+inventive-inventory
 fastchest-revived
 modmenu
