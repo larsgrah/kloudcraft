@@ -111,8 +111,8 @@ hash = "a7f6a1543f41198911a8b1e5e059fa0c8003365ebd6c2314e2dfa0806aff300a"
 metafile = true
 
 [[files]]
-file = "mods/inventory-profiles-next.pw.toml"
-hash = "6afdd9a4f55afb1f553f2cef664d05c70680263cfb327f951755452f2c34670d"
+file = "mods/inventive-inventory.pw.toml"
+hash = "de553ecc35f668270bfe08b10ec9524f6c0c6dddf662667e21b689494b38e2b0"
 metafile = true
 
 [[files]]
@@ -137,11 +137,6 @@ hash = "b157b71cd23be372d5e7646a4f397c957589ac7eec763eb8bedbbf01acad522c"
 [[files]]
 file = "mods/lambdynamiclights.pw.toml"
 hash = "1bcd8fa2d0c2c3390361736420236c2a5331002ae36bb5cba5a062b8708b5ee9"
-metafile = true
-
-[[files]]
-file = "mods/libipn.pw.toml"
-hash = "d1835fa094e5e072919e78f8849a1342a022b1076b94db3effd30871d92e71cc"
 metafile = true
 
 [[files]]

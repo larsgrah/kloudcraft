@@ -1,0 +1,13 @@
+name = "Inventive Inventory"
+filename = "inventive-inventory-1.3.5.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/bUHfVbsa/versions/BjTVHsnc/inventive-inventory-1.3.5.jar"
+hash-format = "sha512"
+hash = "f60ee60e9c6cb4206843939084ae1995c07e6f7ebd5150be833396df9b5da72f90e4fcf452ee29a25f9e3c2abf2524b00bcd6fe38980e7c21cd663d471001e04"
+
+[update]
+[update.modrinth]
+mod-id = "bUHfVbsa"
+version = "BjTVHsnc"
